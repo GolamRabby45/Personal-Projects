@@ -1,0 +1,10 @@
+Data Cleaning Pipeline Report
+=============================
+
+Initial data shape: (891, 12)
+Schema validation passed: True
+Missing values before: 866, after: 689
+Shape before outlier handling: (891, 12), after: (775, 12)
+Final data shape after formatting: (775, 12)
+Cleaned data saved to: ../outputs/cleaned_data.csv
+Model training performed on target 'Survived' with classification.

@@ -1,0 +1,30 @@
+missing_value_strategy:
+  Age: "mean"
+  Fare: "median"
+  Name: "drop"
+
+knn_imputer:
+  n_neighbors: 5
+
+outlier_handling:
+  method: "iqr"
+  columns: ["Fare"]
+  action: "remove"
+  iqr_multiplier: 1.5
+
+formatting:
+  date_columns: ["DateOfTravel"]  # Convert to datetime
+  categorical_cleaning:
+    columns: ["Sex"]
+    lowercase: true
+    strip: true
+  numeric_rounding:
+    columns: ["Fare"]
+    decimals: 2
+
+model_training:
+  target_column: "Survived"
+  model_type: "classification"  # or "regression"
+  test_size: 0.2
+  random_state: 42
+
